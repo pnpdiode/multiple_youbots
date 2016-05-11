@@ -19,7 +19,7 @@
     	     </include>
   	</group>
 
-<!--
+
   	<group ns="youbot2">
     	     <param name="tf_prefix" value="youbot2_tf" />
     	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
@@ -27,7 +27,7 @@
       		<arg name="robot_name"  value="youbot2" />
     	     </include>
   	</group>
-
+<!--
   	<group ns="youbot3">
     	     <param name="tf_prefix" value="youbot3_tf" />
     	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
