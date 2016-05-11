@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="world" default="empty_world"/>
+
+
+  <!-- launch world -->
+  <include file="$(find youbot_gazebo_worlds)/launch/$(arg world).launch" />
+
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find youbot_description)/robots/youbot.urdf.xacro" />
+
+
+  	<!-- BEGIN ROBOT 1-->
+  	<group ns="youbot1">
+    	     <param name="tf_prefix" value="youbot1_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x 2 -y 0 -z 0" />
+      		<arg name="robot_name"  value="youbot1" />
+    	     </include>
+  	</group>
+
+<!--
+  	<group ns="youbot2">
+    	     <param name="tf_prefix" value="youbot2_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x 2 -y -2 -z 0" />
+      		<arg name="robot_name"  value="youbot2" />
+    	     </include>
+  	</group>
+
+  	<group ns="youbot3">
+    	     <param name="tf_prefix" value="youbot3_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x 0 -y -1 -z 0" />
+      		<arg name="robot_name"  value="youbot3" />
+    	     </include>
+  	</group>
+
+	<group ns="youbot4">
+    	     <param name="tf_prefix" value="youbot4_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x -2 -y -1 -z 0" />
+      		<arg name="robot_name"  value="youbot4" />
+    	     </include>
+  	</group>
+
+	<group ns="youbot5">
+    	     <param name="tf_prefix" value="youbot5_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x -4 -y -1 -z 0" />
+      		<arg name="robot_name"  value="youbot5" />
+    	     </include>
+  	</group>
+
+	<group ns="youbot6">
+    	     <param name="tf_prefix" value="youbot6_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x -6 -y -1 -z 0" />
+      		<arg name="robot_name"  value="youbot6" />
+    	     </include>
+  	</group>
+
+	<group ns="youbot7">
+    	     <param name="tf_prefix" value="youbot7_tf" />
+    	     <include file="$(find youbot_gazebo_robot)/launch/multi_youbot.launch" >
+      		<arg name="init_pose" value="-x -8 -y -1 -z 0" />
+      		<arg name="robot_name"  value="youbot7" />
+    	     </include>
+  	</group>
+-->
+
+</launch>
